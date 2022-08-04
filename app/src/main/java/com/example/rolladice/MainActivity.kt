@@ -21,14 +21,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * It creates a dice and, roll it and show the result to the user
+     * It creates 2 dices and, roll it and show the result to the user
      */
     private fun rollDice() {
         val dice = Dice(6)
-        val resultNumber = dice.roll()
-        //TextView instantied here
+        var resultNumber = dice.roll()
+        //TextViews instantied here
         val tv_number: TextView = findViewById(R.id.tv_number)
+        val tv_number2: TextView = findViewById(R.id.tv_number2)
+
         tv_number.text = resultNumber.toString()
+        resultNumber = dice.roll()
+        tv_number2.text = resultNumber.toString()
     }
 
 }
