@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Roll a Dice</string>
+    <string name="rolar">Rolar</string>
+    <string name="clique_para_iniciar">Clique para iniciar</string>
 </resources>
