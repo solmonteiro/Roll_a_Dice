@@ -2,7 +2,7 @@ package com.example.rolladice
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 /**
@@ -26,13 +26,19 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val dice = Dice(6)
         var resultNumber = dice.roll()
-        //TextViews instantied here
-        val tv_number: TextView = findViewById(R.id.tv_number)
-        val tv_number2: TextView = findViewById(R.id.tv_number2)
+        //ImageView instantied here
+        val diceImage: ImageView = findViewById(R.id.imgView)
 
-        tv_number.text = resultNumber.toString()
-        resultNumber = dice.roll()
-        tv_number2.text = resultNumber.toString()
+        when (resultNumber) {
+            1 -> diceImage.setImageResource(R.drawable.dice_1)
+            2 -> diceImage.setImageResource(R.drawable.dice_2)
+            3 -> diceImage.setImageResource(R.drawable.dice_3)
+            4 -> diceImage.setImageResource(R.drawable.dice_4)
+            5 -> diceImage.setImageResource(R.drawable.dice_5)
+            6 -> diceImage.setImageResource(R.drawable.dice_6)
+        }
+
+
     }
 
 }
