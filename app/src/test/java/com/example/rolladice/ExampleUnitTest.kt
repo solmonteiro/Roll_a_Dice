@@ -1,8 +1,8 @@
 package com.example.rolladice
 
-import org.junit.Test
 
-import org.junit.Assert.*
+import org.junit.Assert.assertTrue
+import org.junit.Test
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -11,7 +11,11 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
+fun generate_numbers(){
+    val dice = Dice(6)
+        val numberResult=dice.roll()
+
+        assertTrue("Range retorno do dado fora do intervalo 1..6",numberResult in 1..6)
+
+}
 }
